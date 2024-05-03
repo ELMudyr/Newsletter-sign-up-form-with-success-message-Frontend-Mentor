@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", "sans-serif";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  gap: 3em;
+}
+.imgcontainer {
+  margin: auto;
+}
+.mobileimg {
+  margin: auto;
+}
+.textcontainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  gap: 1rem;
+}
+h1 {
+  font-weight: 700;
+  color: var(--DarkSlateGrey);
+  font-size: 2.5rem;
+  margin: 0;
+}
+p {
+  font-weight: 400;
+  font-size: 16px;
+  width: 20rem;
+  color: var(--CharcoalGrey);
+  margin: 0;
+}
+.checkmarkcontainer {
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.checkmark {
+  height: 1.35rem;
+}
+.pcheck {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.pcheck p {
+  width: 17rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+label {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--DarkSlateGrey);
+}
+input {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border-color: var(--Grey);
+  border-style: solid;
+  border-width: 1px;
+  font-weight: 700;
+  font-size: 16px;
+  opacity: 70%;
+}
+button {
+  background-color: var(--DarkSlateGrey);
+  color: var(--White);
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  border-style: none;
+  cursor: pointer;
+}
+.desktopimg {
+  display: none;
+}
+.emaillabel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.errorLabel {
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--Tomato);
+}
+.error-input {
+  border: 2px solid var(--Tomato);
+  color: var(--Tomato);
+  background-color: hsl(4, 100%, 67%, 20%);
+}
+
+
+@media only screen and (min-width: 900px) {
+  body {
+    background-color: var(--CharcoalGrey);
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    display: flex;
+    height: 100vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--White);
+    height: fit-content;
+    width: fit-content;
+    gap: 4rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-top: auto;
+  }
+  .mobileimg {
+    display: none;
+  }
+  .desktopimg {
+    display: block;
+  }
+  p {
+    width: auto;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .checkmarkcontainer {
+    height: fit-content;
+    width: auto;
+    margin-right: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .pcheck p {
+    width: 20rem;
+  }
+  .textcontainer {
+    margin-left: 2rem;
+  }
+  button:hover {
+    background-image: linear-gradient(to right, #fc6076, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+}
